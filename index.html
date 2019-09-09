@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<title>Техномарт фильтр</title>
+	<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+	
+	<section class="container">
+		<h1 hidden>Товары</h1>
+
+		<form class="filter" action="#" method="post">
+			<p class="filter__title">Фильтр:</p>
+
+			<fieldset class="filter__price">
+				<h2 class="filter__prise-title">Цена:</h2>
+
+				<div class="filter__prise-range">
+					<div class="middle">
+						<div id="range"></div>
+					</div>
+				</div>
+				<input id="min" class="filter__prise-min" type="text" disabled>
+				<span class="filter__prise-hyphen">—</span>
+				<input id="max" class="filter__prise-max" type="text" disabled>
+			</fieldset>
+
+			<fieldset class="filter__produsers">
+				<h2 class="filter__produsers-title">Производители:</h2>
+
+				<input class="filter__produsers-item" id="bosch" name="produsers" type="checkbox">
+				<label for="bosch">Bosch</label>
+				<input class="filter__produsers-item" id="interscol" name="produsers" type="checkbox">
+				<label for="interscol">Интерскол</label>
+				<input class="filter__produsers-item" id="makita" name="produsers" type="checkbox">
+				<label for="makita">Makita</label>
+				<input class="filter__produsers-item" id="dewalt" name="produsers" type="checkbox">
+				<label for="dewalt">Dewalt</label>
+				<input class="filter__produsers-item" id="hitachi" name="produsers" type="checkbox">
+				<label for="hitachi">Hitachi</label>
+			</fieldset>
+
+			<fieldset class="filter__power">
+				<h2 class="filter__power-title">Питание:</h2>
+
+				<input class="filter__power-item" id="rechargeable" name="power" type="radio">
+				<label for="rechargeable">Аккумуляторные</label>
+				<input class="filter__power-item" id="mains" name="power" type="radio">
+				<label for="mains">Сетевые</label>
+			</fieldset>
+
+			<button class="filter__button" type="submit">Показать</button>
+		</form>
+		
+	</section>
+
+	<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+  	<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+	<script src="js/main.js"></script>
+</body>
+</html>

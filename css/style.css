@@ -1,0 +1,244 @@
+@import url('https://fonts.googleapis.com/css?family=PT+Sans:400,700&display=swap&subset=cyrillic');
+
+body {
+	margin: 0;
+	padding: 0;
+	font-family: 'PT Sans', sans-serif;
+}
+
+h1,h2,h3,h4,h5,h6 {
+	margin: 0;
+}
+
+*,
+*::before,
+*::after {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+.container {
+	margin: 0 auto;
+	width: 940px;
+}
+
+.filter {
+	width: 220px;
+}
+
+.filter input[type="checkbox"],
+.filter input[type="radio"] {
+	display: none;
+}
+
+.filter__title {
+	margin: 0;
+	padding-left: 18px;
+	margin-bottom: 15px;
+	width: 100%;
+	font-size: 13px;
+	font-weight: 400;
+	line-height: 38px;
+	text-transform: uppercase;
+	border-radius: 5px;
+	background-color: #f7f3ec;
+}
+
+.filter__price,
+.filter__produsers,
+.filter__power {
+	padding: 0;
+	padding-bottom: 25px;
+	margin: 0;
+	margin-bottom: 20px;
+	width: 100%;
+	border: none;
+	border-bottom: 1px solid #e5e5e5;
+}
+
+.filter__prise-title,
+.filter__produsers-title,
+.filter__power-title {
+	margin-bottom: 15px;
+	font-size: 17px;
+	font-weight: 700;
+	line-height: 30px;
+	text-transform: uppercase;
+}
+
+.filter__prise-range {
+	margin-bottom: 9px;
+	width: 100%;
+	height: 80px;
+	border-radius: 5px;
+	background-color: #f7f3ec;
+	position: relative;
+}
+
+.filter__prise-min,
+.filter__prise-max {
+	width: 95px;
+	height: 38px;
+	font-family: inherit;
+	font-size: 17px;
+	line-height: 18;
+	font-weight: 400;
+	text-align: center;
+	border: none;
+	border-radius: 5px;
+	background-color: #f7f3ec;
+}
+
+.filter__prise-hyphen {
+	margin: 0 4px;
+	font-size: 16px;
+	line-height: 18px;
+	font-weight: 400;
+}
+
+.filter__produsers,
+.filter__power {
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;
+	-webkit-flex-direction: column;
+	-moz-flex-direction: column;
+	-ms-flex-direction: column;
+	-o-flex-direction: column;
+	flex-direction: column;
+}
+
+.filter__produsers-item ~ label,
+.filter__power-item ~ label {
+	margin-bottom: 24px;
+	padding-left: 35px;
+	font-size: 15px;
+	line-height: 20px;
+	text-transform: uppercase;
+	position: relative;
+}
+
+.filter__produsers-item ~ label::before,
+.filter__produsers-item ~ label::after,
+.filter__power-item ~ label::before,
+.filter__power-item ~ label::after {
+	content: '';
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+	transition: .3s linear;
+}
+
+.filter__produsers-item ~ label::before {
+	left: 0;
+	width: 23px;
+	height: 23px;
+	border: 2px solid #c5c5c5;
+	border-radius: 2px;
+	opacity: 1;
+}
+
+.filter__produsers-item ~ label::after {
+	left: 0;
+	width: 27px;
+	height: 23px;
+	background-image: url(../img/checkbox-on.svg);
+	opacity: 0;
+}
+
+.filter__power-item ~ label::before {
+	left: 0;
+	width: 25px;
+	height: 25px;
+	border-radius: 50%;
+	border: 4px solid #c5c5c5;
+}
+
+.filter__power-item ~ label::after {
+	left: 8px;
+	width: 9px;
+	height: 9px;
+	border-radius: 50%;
+	background-color: #c5c5c5;
+	opacity: 0;
+}
+
+.filter__produsers-item ~ label:last-child,
+.filter__power-item ~ label:last-child {
+	margin-bottom: 0;
+}
+
+.filter__power {
+	margin-bottom: 55px;
+	border: none;
+}
+
+#bosch:checked ~ label:nth-of-type(1)::before,
+#interscol:checked ~ label:nth-of-type(2)::before,
+#makita:checked ~ label:nth-of-type(3)::before,
+#dewalt:checked ~ label:nth-of-type(4)::before,
+#hitachi:checked ~ label:nth-of-type(5)::before {
+	opacity: 0;
+}
+
+#bosch:checked ~ label:nth-of-type(1)::after,
+#interscol:checked ~ label:nth-of-type(2)::after,
+#makita:checked ~ label:nth-of-type(3)::after,
+#dewalt:checked ~ label:nth-of-type(4)::after,
+#hitachi:checked ~ label:nth-of-type(5)::after {
+	opacity: 1;
+}
+
+#rechargeable:checked ~ label:nth-of-type(1)::after,
+#mains:checked ~ label:nth-of-type(2)::after {
+	opacity: 1;
+}
+
+.filter__button {
+	margin-bottom: 20px;
+	width: 140px;
+	height: 38px;
+	font-size: 13px;
+	line-height: 18px;
+	text-transform: uppercase;
+	background-color: #fff;
+	border: 1px solid #e5e5e5;
+	border-radius: 2px;
+}
+
+
+/* Range slider*/
+.middle {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	width: 180px;
+	height: 2px;
+	background-color: #d7dcde;
+}
+
+.ui-slider {
+	position: relative;
+	width: 160px;
+}
+
+.ui-slider-range {
+	position: absolute;
+	height: 2px;
+	background-color: #00ca74;
+}
+
+.ui-slider-handle {
+	position: absolute;
+	top: -9px;
+	width: 20px;
+	height: 23px;
+	background-image: url(../img/filter-button.svg);
+}
+/* Range slider*/
+
+

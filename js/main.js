@@ -2,7 +2,7 @@ $( function() {
   $( "#range" ).slider({
     range: true,
     min: 0,
-    max: 30000,
+    max: 35000,
     values: [ 0, 30000 ],
     slide: function( event, ui ) {
       $( "#min" ).val(ui.values[0]);

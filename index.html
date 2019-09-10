@@ -6,6 +6,15 @@
 	<link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+
+	<svg style="display: none;">
+		<symbol id="arrow-up" viewBox="0 0 11 10">
+			<polygon points="5.5,0 0,10 11,10 "/>
+		</symbol>
+		<symbol id="arrow-down" viewBox="0 0 11 10">
+			<polyline points="5.5,10 0,0 11,0 "/>
+		</symbol>
+	</svg>
 	
 	<section class="container">
 		<h1 hidden>Товары</h1>
@@ -44,7 +53,7 @@
 			<fieldset class="filter__power">
 				<h2 class="filter__power-title">Питание:</h2>
 
-				<input class="filter__power-item" id="rechargeable" name="power" type="radio">
+				<input class="filter__power-item" id="rechargeable" name="power" type="radio" checked>
 				<label for="rechargeable">Аккумуляторные</label>
 				<input class="filter__power-item" id="mains" name="power" type="radio">
 				<label for="mains">Сетевые</label>
@@ -52,6 +61,36 @@
 
 			<button class="filter__button" type="submit">Показать</button>
 		</form>
+
+		<section class="products-list">
+			<h2 class="products-list__title" hidden>Список товаров</h2>
+
+			<section class="sort">
+				<h3 class="sort__title">Сортировка:</h3>
+
+				<ul class="sort__list">
+					<li class="sort__list-item"><a href="" class="active">По цене</a></li>
+					<li class="sort__list-item"><a href="">По типу</a></li>
+					<li class="sort__list-item"><a href="">По функционалу</a></li>
+				</ul>
+				<ul class="sort__handles">
+					<li class="sort__handle-item">
+						<a href="">
+							<svg class="arrow active">
+								<use xlink:href="#arrow-up">
+							</svg>
+						</a>
+					</li>
+					<li class="sort__handle-item">
+						<a href="">
+							<svg class="arrow">
+								<use xlink:href="#arrow-down">
+							</svg>
+						</a>
+					</li>
+				</ul>
+			</section>
+		</section>
 		
 	</section>
 
